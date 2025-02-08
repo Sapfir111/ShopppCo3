@@ -1,0 +1,86 @@
+body {
+  //@include fluid-text(72, 18);
+
+  font-weight: 400;
+  line-height: 1.28;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+
+  overflow-x: hidden;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* For vertical scrollbars */
+  height: 6px; /* For horizontal scrollbars */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  //background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bcbcbc;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//h1 {
+//  @include desktop-large {
+//    font-size: 52px;
+//  }
+//
+//  @include mobile {
+//    font-size: 40px;
+//  }
+//}
+//
+//h2 {
+//  @include desktop-large {
+//    font-size: 40px;
+//  }
+//
+//  @include mobile {
+//    font-size: 30px;
+//  }
+//}
+//
+//h3 {
+//  @include desktop-large {
+//    font-size: 24px;
+//  }
+//
+//  @include mobile {
+//    font-size: 20px;
+//  }
+//}
+//
+//h4 {
+//  @include desktop-large {
+//    font-size: 18px;
+//  }
+//
+//  @include mobile {
+//    font-size: 17px;
+//  }
+//}

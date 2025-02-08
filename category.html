@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Category Page</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__body container mobile-container">
+        <div class="header__column-one">
+            <button class="header__burger-menu-button visible-tablet" type="button" onclick="mobileOverlay.showModal()">
+                <img width="24" height="24" src="images/icons/burger-menu.svg" alt="burger menu">
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+
+            <div class="header__logo-wrapper">
+                <a href="index.html">
+                    <img width="160" height="22" src="images/logo/logo.svg" alt="logo">
+                </a>
+            </div>
+            <ul class="header__list hidden-tablet">
+                <li class="header__list-item">
+                    Shop
+                    <button type="button">
+                        <img src="images/icons/see-more-black.svg" alt="see more">
+                        <span class="visually-hidden">See more</span>
+                    </button>
+                </li>
+                <li class="header__list-item">
+                    On Sale
+                </li>
+                <li class="header__list-item">
+                    New Arrivals
+                </li>
+                <li class="header__list-item">
+                    Brands
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__column-two">
+            <div class="header__input-wrapper hidden-tablet">
+                <button>
+                    <img src="images/icons/input-search.svg" alt="search">
+                    <span class="visually-hidden">Search</span>
+                </button>
+                <input type="text" class="header__input" placeholder="Search for products...">
+            </div>
+            <div class="header__icon-wrapper">
+                <a href="#" class="visible-mobile">
+                    <img src="images/icons/mobile-input-search.svg" alt="search">
+                </a>
+                <a href="cart.html" class="header__cart-wrapper">
+                    <img width="24" height="24" src="images/icons/cart.svg" alt="cart">
+                    <p class="header__cart-quantity js-cart-quantity"></p>
+                </a>
+                <a href="#">
+                    <img width="24" height="24" src="images/icons/account.svg" alt="account">
+                </a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main class="content category-catalog__content">
+        <div class="category-catalog__content-body container mobile-container">
+            <section class="section filter hidden-tablet">
+                <div class="filter__body">
+                    <div class="filter__title filter__title-general">
+                        <p>Filters</p>
+                        <button>
+                            <img src="images/icons/filters-gray.svg" alt="filter">
+                        </button>
+                    </div>
+                    <div class="filter__categories">
+                        <ul class="filter__list">
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>T-shirts</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Shorts</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Shirts</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Hoodie</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Jeans</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__price">
+                        <div class="filter__title">
+                            <p>Price</p>
+                            <img src="images/icons/arrow-up-black.svg" alt="">
+                        </div>
+                        <div class="filter__price-range">
+                            <div class="filter__price-range-input-wrapper">
+                                <input class="js-range-input" data-range-id="1" type="range" id="range-min js-range-min" min="0" max="1000" value="200" />
+                                <p data-par-id="1" class="filter__price-range-text js-range-min-par" id="js-range-min"></p>
+                            </div>
+                            <div class="filter__price-range-input-wrapper">
+                                <input class="js-range-input" data-range-id="2" type="range" id="range-max js-range-max" min="0" max="1000" value="800" />
+                                <p data-par-id="1" class="filter__price-range-text js-range-max-par" id="js-range-max"></p>
+                            </div>
+                            <div class="filter__price-slider-track"></div>
+                        </div>
+                    </div>
+                    <div class="filter__colours">
+                        <div class="filter__title">
+                            <p>Colours</p>
+                            <img src="images/icons/arrow-up-black.svg" alt="">
+                        </div>
+                        <div class="filter__colours-wrapper">
+                            <div class="filter__colour filter__colour-green"></div>
+                            <div class="filter__colour filter__colour-red"></div>
+                            <div class="filter__colour filter__colour-yellow"></div>
+                            <div class="filter__colour filter__colour-orange"></div>
+                            <div class="filter__colour filter__colour-cyan"></div>
+                            <div class="filter__colour filter__colour-blue"></div>
+                            <div class="filter__colour filter__colour-purple"></div>
+                            <div class="filter__colour filter__colour-pink"></div>
+                            <div class="filter__colour filter__colour-white"></div>
+                            <div class="filter__colour filter__colour-black"></div>
+                        </div>
+                    </div>
+                    <div class="filter__size">
+                        <div class="filter__title">
+                            <p>Size</p>
+                            <img src="images/icons/arrow-up-black.svg" alt="">
+                        </div>
+                        <div class="filter__size-chart">
+                            <button class="filter__size-chart-button">XX-Small</button>
+                            <button class="filter__size-chart-button">X-Small</button>
+                            <button class="filter__size-chart-button">Small</button>
+                            <button class="filter__size-chart-button">Medium</button>
+                            <button class="filter__size-chart-button">Large</button>
+                            <button class="filter__size-chart-button">X-Large</button>
+                            <button class="filter__size-chart-button">XX-Large</button>
+                            <button class="filter__size-chart-button">3X-Large</button>
+                            <button class="filter__size-chart-button">4X-Large</button>
+                        </div>
+                    </div>
+                    <div class="filter__style">
+                        <div class="filter__title">
+                            <p>Style</p>
+                            <img src="images/icons/arrow-up-black.svg" alt="">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Casual</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Formal</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Party</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="filter__item">
+                                <a href="#">
+                                    <p>Gym</p>
+                                    <img src="images/icons/arrow-right-gray.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="filter__apply-button">Apply Filter</button>
+                </div>
+            </section>
+
+            <section class="section category-catalog">
+                <div class="category-catalog__title-wrapper">
+                    <p class="category-catalog__title">Casual</p>
+                    <div class="category-catalog__sort">
+                        <p>Showing 1-10 of 100 Products</p>
+                        <div class="hidden-tablet">
+                            <p>Sort by:</p>
+                            <span>Most Popular</span>
+                            <img src="images/icons/arrow-down-black.svg" alt="">
+                        </div>
+                    </div>
+                    <button class="category-catalog__filter-button visible-tablet">
+                        <img src="images/icons/filters-black.svg" alt="">
+                    </button>
+                </div>
+                <div class="category-catalog__catalog">
+                    <ul class="category-catalog__catalog-list">
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/details/also-like/2.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Gradient Graphic T-shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/3.5.svg" alt="rating">
+                                    <p>3.5/<span>5</span></p>
+                                </div>
+                                <p class="catalog__product-price">$145</p>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/details/also-like/3.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Polo with Tipping Details</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/4.5.svg" alt="rating">
+                                    <p>4.5/<span>5</span></p>
+                                </div>
+                                <p class="catalog__product-price">$180</p>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/details/also-like/4.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Black Striped T-shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/5.svg" alt="rating">
+                                    <p>5.0/<span>5</span></p>
+                                </div>
+                                <div class="catalog__product-price-wrapper">
+                                    <p class="catalog__product-price">$120</p>
+                                    <p class="catalog__product-previous-price">$150</p>
+                                    <p class="catalog__product-discount">-30%</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/new-arrivals/2.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">SKINNY FIT JEANS</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/3.5.svg" alt="rating">
+                                    <p>3.5/<span>5</span></p>
+                                </div>
+                                <div class="catalog__product-price-wrapper">
+                                    <p class="catalog__product-price">$240</p>
+                                    <p class="catalog__product-previous-price">$260</p>
+                                    <p class="catalog__product-discount">-20%</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/new-arrivals/3.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Checkered Shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/4.5.svg" alt="rating">
+                                    <p>4.5/<span>5</span></p>
+                                </div>
+                                <p class="catalog__product-price">$180</p>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/new-arrivals/4.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Sleeve Striped T-Shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/4.5.svg" alt="rating">
+                                    <p>4.5/<span>5</span></p>
+                                </div>
+                                <div class="catalog__product-price-wrapper">
+                                    <p class="catalog__product-price">$130</p>
+                                    <p class="catalog__product-previous-price">$160</p>
+                                    <p class="catalog__product-discount">-30%</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/top-selling/1.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Vertical Striped Shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/5.svg" alt="rating">
+                                    <p>5.0/<span>5</span></p>
+                                </div>
+                                <div class="catalog__product-price-wrapper">
+                                    <p class="catalog__product-price">$212</p>
+                                    <p class="catalog__product-previous-price">$232</p>
+                                    <p class="catalog__product-discount">-20%</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/top-selling/2.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Courage Graphic T-Shirt</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/4.svg" alt="rating">
+                                    <p>4.0/<span>5</span></p>
+                                </div>
+                                <p class="catalog__product-price">$145</p>
+                            </div>
+                        </li>
+                        <li class="category-catalog__item js-product">
+                            <img class="category-catalog__product-image" src="images/products/top-selling/3.svg" alt="product">
+                            <div class="catalog__product-description">
+                                <p class="catalog__product-name">Loose Fit Bermuda Shorts</p>
+                                <div class="catalog__product-rating-wrapper">
+                                    <img src="images/icons/stars/3.svg" alt="rating">
+                                    <p>3.0/<span>5</span></p>
+                                </div>
+                                <p class="catalog__product-price">$80</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="category-catalog__pagination-wrapper">
+                        <button>
+                            <img src="images/icons/arrow-left-black.svg" alt="">
+                            Previous
+                        </button>
+                        <ul class="category-catalog__pagination-list">
+                            <li class="category-catalog__pagination-item">1</li>
+                            <li class="category-catalog__pagination-item">2</li>
+                            <li class="category-catalog__pagination-item">3</li>
+                            <li class="category-catalog__pagination-item">...</li>
+                            <li class="category-catalog__pagination-item">8</li>
+                            <li class="category-catalog__pagination-item">9</li>
+                            <li class="category-catalog__pagination-item">10</li>
+                        </ul>
+                        <button>
+                            Next
+                            <img src="images/icons/arrow-right-black.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__body container mobile-container">
+            <div class="footer__message js-message">
+                <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+                <div class="footer__newsletter-wrapper">
+                    <div class="footer__input-wrapper">
+                        <img src="images/icons/message.svg" alt="">
+                        <input class="footer__input" type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </div>
+            </div>
+
+            <div class="footer__link-wrapper js-link-wrapper">
+                <div class="footer__slogan-container">
+                    <div class="footer__logo-wrapper">
+                        <a href="index.html">
+                            <img src="images/logo/logo.svg" alt="logo">
+                        </a>
+                        <p class="footer__slogan">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="#">
+                            <img src="images/socials/twitter.svg" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/github.svg" alt="github">
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Company</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">About</a>
+                            <a href="#">Features</a>
+                            <a href="#">Works</a>
+                            <a href="#">Career</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Help</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Customer Support</a>
+                            <a href="#">Delivery Details</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>FAQ</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Account</a>
+                            <a href="#">Manage Deliveries</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Payments</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Resources</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Free eBooks</a>
+                            <a href="#">Development Tutorial</a>
+                            <a href="#">How to - Blog</a>
+                            <a href="#">Youtube Playlist</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__credits">
+                <p>Shop.co © 2000-2023, All Rights Reserved</p>
+                <ul class="footer__credits-list">
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/visa.svg" alt="visa">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/mastercard.svg" alt="mastercard">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/paypal.svg" alt="paypal">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/apple-pay.svg" alt="apple pay">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/google-pay.svg" alt="google pay">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="mobile-overlay" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button" type="submit">
+                <img src="images/icons/close-menu.svg" alt="close menu">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list">
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Shop</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">On Sale</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">New Arrivals</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Brands</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <script type="module" src="scripts/category/category.js"></script>
+</body>
+</html>

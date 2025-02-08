@@ -1,0 +1,42 @@
+@import
+  'mixins',
+  'variables',
+  'normalize',
+  'fonts',
+  'globals',
+  'media',
+  'utils'
+;
+
+@import
+  'shared/header',
+  'shared/footer',
+  'shared/shared-classes'
+;
+
+@import
+  'blocks/mobile-overlay',
+  'blocks/homepage/opening',
+  'blocks/homepage/brands',
+  'blocks/homepage/catalog',
+  'blocks/homepage/browse',
+  'blocks/homepage/review'
+;
+
+@import
+  'blocks/details/overview',
+  'blocks/details/tabs',
+  'blocks/details/details-review'
+;
+
+@import
+  'blocks/category/content',
+  'blocks/category/filter',
+  'blocks/category/category-catalog'
+;
+
+@import
+  'blocks/cart/cart',
+  'blocks/cart/products-container',
+  'blocks/cart/order-summary'
+;

@@ -1,0 +1,26 @@
+.cart {
+
+  p {
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 40px;
+
+    @include desktop-small {
+      font-size: 32px;
+    }
+  }
+
+  &__grid-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    column-gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+  }
+}

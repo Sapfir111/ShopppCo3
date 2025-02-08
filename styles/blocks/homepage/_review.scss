@@ -1,0 +1,142 @@
+.review {
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    p {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0;
+
+      @include tablet {
+        font-size: 30px;
+      }
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__title-button-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    button {
+      @include reset-button;
+      @include square(50px);
+
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 400px;
+    column-gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    @include mobile {
+      grid-auto-columns: 100%;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+    flex: 0 0 400px;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-body {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &-name-wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+
+      p {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    &-rating-image {
+      width: 138px;
+      height: 22px;
+    }
+
+    &-text {
+      opacity: 60%;
+      font-size: 16px;
+    }
+  }
+
+  &__slides-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+
+    @include mobile {
+      display: inline;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &::after {
+      right: 0;
+      background: rgba(230, 230, 230, 0.8);
+      filter: blur(20px);
+
+      @include tablet {
+        background: transparent;
+      }
+    }
+
+    &::before {
+      left: 0;
+      background: rgba(230, 230, 230, 0.8);
+      filter: blur(20px);
+
+      @include tablet {
+        background: transparent;
+      }
+    }
+  }
+}

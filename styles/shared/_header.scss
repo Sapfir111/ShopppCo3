@@ -1,0 +1,149 @@
+.header {
+
+  &__body {
+    display: flex;
+    align-items: center;
+    padding-block: 30px;
+    column-gap: 40px;
+
+    @include desktop-small {
+      column-gap: 30px;
+    }
+
+    @include tablet {
+      column-gap: 0;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__burger-menu-button {
+    @include reset-button;
+  }
+
+  &__column-one,
+  &__column-two{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+    @include mobile {
+      column-gap: 12px;
+    }
+  }
+
+  &__column-two {
+    width: 100%;
+    max-width: 580px;
+
+    @include desktop-small {
+      max-width: 500px;
+    }
+
+    @include tablet {
+      width: auto;
+    }
+
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  &__cart-wrapper {
+    position: relative;
+  }
+
+  &__cart-quantity {
+    @include square(30px);
+
+    position: absolute;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    top: 10px;
+    left: 80%;
+
+    @include tablet {
+      @include square(25px);
+      font-size: 13px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    width: 100%;
+    max-width: 350px;
+
+    &-item {
+      font-size: 16px;
+
+      @include desktop-small {
+        font-size: 13px;
+      }
+    }
+
+    &-item:first-child {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+
+      button {
+        @include reset-button;
+      }
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 100%;
+      max-width: 580px;
+      padding: 16px 12px 16px 55px;
+      background-color: var(--color-light-gray);
+      color: var(--color-dark) opacity(40%);
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-weight: 300;
+      border-radius: 62px;
+    }
+
+    button {
+      @include reset-button;
+
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      translate: -50% -50%;
+
+      @include desktop-small {
+        left: 8%;
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+  }
+
+  &__logo-wrapper{
+    img {
+      width: 126px;
+      height: 18px;
+    }
+  }
+}

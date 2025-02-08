@@ -1,0 +1,157 @@
+.opening {
+  position: relative;
+
+  &__body {
+    width: 100%;
+    background-color: var(--color-light-gray);
+  }
+
+  &__ad-image {
+    width: 100%;
+  }
+
+  &__description {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include tablet {
+      row-gap: 10px;
+      font-size: 25px;
+      max-width: 245px;
+    }
+
+    @include mobile {
+      top: 200px;
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    &-title {
+      font-size: 64px;
+      width: 100%;
+      max-width: 580px;
+
+      @include desktop-small {
+        font-size: 45px;
+        max-width: 450px;
+      }
+
+      @include tablet {
+        font-size: 21px;
+        max-width: 260px;
+      }
+
+      @include mobile {
+        font-size: 36px;
+        max-width: 100%;
+      }
+    }
+
+    &-subtitle {
+      opacity: 60%;
+      width: 100%;
+      max-width: 545px;
+
+      @include desktop-small {
+        max-width: 440px;
+        font-size: 13px;
+      }
+
+      @include tablet {
+        max-width: 290px;
+        font-size: 10px;
+      }
+
+      @include mobile {
+        max-width: 100%;
+        font-size: 11px;
+      }
+    }
+
+    button {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      width: 100%;
+      max-width: 210px;
+
+      @include desktop-small {
+        max-width: 145px;
+        padding: 15px;
+        font-size: 13px;
+      }
+
+      @include tablet {
+        max-width: 100px;
+        padding: 10px;
+        font-size: 10px;
+      }
+
+      @include mobile {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 32px;
+
+      @include desktop-small {
+        column-gap: 20px;
+      }
+
+      @include tablet {
+        column-gap: 15px;
+        max-width: 300px;
+      }
+
+      &-item {
+        &:not(:last-child) {
+          border-right: 1px solid #D9D9D9;
+          padding-right: 32px;
+
+          @include desktop-small {
+            padding-right: 20px;
+          }
+
+          @include tablet {
+            padding-right: 15px;
+          }
+        }
+
+        p:first-child {
+          font-weight: 700;
+          font-size: 40px;
+
+          @include desktop-small {
+            font-size: 30px;
+          }
+
+          @include tablet {
+            font-size: 15px;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          @include desktop-small {
+            font-size: 14px;
+          }
+
+          @include tablet {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,268 @@
+.footer {
+  background-color: var(--color-light-gray);
+  position: relative;
+  margin-top: 200px;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    p {
+      opacity: 60%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
+    padding-top: 120px;
+
+    @include tablet {
+      column-gap: 45px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 25px;
+      padding-top: 200px;
+    }
+  }
+
+  &__slogan-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    width: 100%;
+    max-width: 250px;
+
+    @include desktop-small {
+      row-gap: 15px;
+    }
+
+    @include mobile {
+      max-width: 400px;
+    }
+
+    p {
+      @include desktop-small {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__links-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 125px;
+
+    @include tablet {
+      column-gap: 45px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 25px;
+    }
+  }
+
+  &__links-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    font-size: 18px;
+
+    @include desktop-small {
+      row-gap: 15px;
+    }
+
+    p {
+      @include desktop-small {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include desktop-small {
+      row-gap: 15px;
+    }
+
+    a {
+      opacity: 60%;
+      font-size: 16px;
+
+      @include desktop-small {
+        font-size: 13px;
+      }
+
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__credits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    img {
+      @include tablet {
+        width: 46px;
+        height: 30px;
+      }
+    }
+
+    p {
+      opacity: 60%;
+      font-size: 14px;
+      margin: 0;
+
+      @include desktop-small {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__credits-list {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    @include mobile {
+      column-gap: 0;
+    }
+  }
+
+  &__message {
+    background-color: var(--color-dark);
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    padding: 36px 64px;
+    border-radius: var(--border-radius-small);
+    position: absolute;
+    top: -20%;
+
+    @include desktop-small {
+      top: -18%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 15px;
+      padding: 18px 32px;
+      height: 300px;
+    }
+
+    p {
+      font-size: 35px;
+      font-weight: 700;
+      color: var(--color-light);
+      width: 100%;
+      max-width: 550px;
+      margin: 0;
+
+      @include tablet {
+        font-size: 25px;
+      }
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__newsletter-wrapper {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include tablet {
+      max-width: 220px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    button {
+      padding: 16px 12px;
+      font-size: 16px;
+      background-color: var(--color-light);
+      color: var(--color-dark);
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      translate: -50% -50%;
+      left: 8%;
+
+      @include tablet {
+        left: 12%;
+      }
+
+      @include mobile {
+        left: 10%;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 16px 12px 16px 50px;
+    border-radius: 62px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}

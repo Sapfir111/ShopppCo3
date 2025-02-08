@@ -1,0 +1,27 @@
+.view-all-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-bottom: 2px solid var(--color-light-gray);
+}
+
+.border-none {
+  border: none;
+}
+
+.view-all-button {
+  background-color: transparent;
+  color: var(--color-dark);
+  border: 2px solid var(--color-light-gray);
+  font-size: 15px;
+  width: 210px;
+  padding: 16px 54px;
+
+  @include mobile {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+}

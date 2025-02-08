@@ -1,0 +1,78 @@
+.container {
+  max-width: calc(
+          var(--container-width) + var(--container-padding-x) * 2
+  );
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.mobile-container {
+  @include mobile {
+    padding-inline: 16px;
+  }
+}
+
+.button-small {
+  padding: 16px 54px;
+  width: 100%;
+  max-width: 210px;
+}
+
+button {
+  border-radius: 62px;
+  font-size: 16px;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.visible-desktop {
+  @include desktop-small-above {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @include desktop-small {
+    display: none !important;
+  }
+}

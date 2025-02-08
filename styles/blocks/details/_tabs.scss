@@ -1,0 +1,33 @@
+.tabs {
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__tab {
+    font-size: 20px;
+    opacity: 60%;
+    border-bottom: 3px solid var(--color-light-gray);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  &__tab-active {
+    opacity: 1;
+    border-bottom: 3px solid var(--color-dark);
+  }
+
+  &__tab,
+  &__tab-active {
+    @include desktop-small {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 13px;
+      padding-bottom: 15px;
+    }
+  }
+}

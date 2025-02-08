@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__body container mobile-container">
+        <div class="header__column-one">
+            <button class="header__burger-menu-button visible-tablet" type="button" onclick="mobileOverlay.showModal()">
+                <img width="24" height="24" src="images/icons/burger-menu.svg" alt="burger menu">
+                <span class="visually-hidden">Open navigation menu</span>
+            </button>
+
+            <div class="header__logo-wrapper">
+                <a href="index.html">
+                    <img width="160" height="22" src="images/logo/logo.svg" alt="logo">
+                </a>
+            </div>
+            <ul class="header__list hidden-tablet">
+                <li class="header__list-item">
+                    Shop
+                    <button type="button">
+                        <img src="images/icons/see-more-black.svg" alt="see more">
+                        <span class="visually-hidden">See more</span>
+                    </button>
+                </li>
+                <li class="header__list-item">
+                    On Sale
+                </li>
+                <li class="header__list-item">
+                    New Arrivals
+                </li>
+                <li class="header__list-item">
+                    Brands
+                </li>
+            </ul>
+        </div>
+
+        <div class="header__column-two">
+            <div class="header__input-wrapper hidden-tablet">
+                <button>
+                    <img src="images/icons/input-search.svg" alt="search">
+                    <span class="visually-hidden">Search</span>
+                </button>
+                <input type="text" class="header__input" placeholder="Search for products...">
+            </div>
+            <div class="header__icon-wrapper">
+                <a href="#" class="visible-mobile">
+                    <img src="images/icons/mobile-input-search.svg" alt="search">
+                </a>
+                <a href="cart.html" class="header__cart-wrapper">
+                    <img width="24" height="24" src="images/icons/cart.svg" alt="cart">
+                    <p class="header__cart-quantity js-cart-quantity"></p>
+                </a>
+                <a href="#">
+                    <img width="24" height="24" src="images/icons/account.svg" alt="account">
+                </a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main class="content">
+        <section class="section cart__title">
+            <div class="cart__title-body container mobile-container">
+                <h1>Your cart</h1>
+            </div>
+        </section>
+
+        <section class="section cart__grid">
+            <div class="cart__grid-body container mobile-container">
+                <div class="products__container">
+                    <ul class="products__list js-products-list"></ul>
+                </div>
+                <div class="order-summary">
+                    <div class="order-summary__body js-order-summary">
+                        <!--
+                        <div class="order-summary__title">
+                            <p>Order Summary</p>
+                        </div>
+                        <div class="order-summary__calculations-wrapper">
+                            <div class="order-summary__calculation">
+                                <p class="order-summary__calculation-name">Subtotal</p>
+                                <p class="order-summary__calculation-number">$565</p>
+                            </div>
+                            <div class="order-summary__calculation">
+                                <p class="order-summary__calculation-name">Discount (-20%)</p>
+                                <p class="order-summary__calculation-discount">-$113</p>
+                            </div>
+                            <div class="order-summary__calculation">
+                                <p class="order-summary__calculation-name">Delivery Fee</p>
+                                <p class="order-summary__calculation-number">$15</p>
+                            </div>
+                        </div>
+                        <div class="order-summary__total-wrapper">
+                            <p class="order-summary__total-name">Total</p>
+                            <p class="order-summary__total-number">$467</p>
+                        </div>
+                        -->
+                        <form class="order-summary__promo-code">
+                            <div class="order-summary__input-wrapper">
+                                <img src="images/icons/promo-code.svg" alt="">
+                                <input type="text" placeholder="Add promo code">
+                            </div>
+                            <button class="order-summary__apply-button" type="submit">Apply</button>
+                        </form>
+                        <button class="order-summary__checkout-button">
+                            Go to Checkout
+                            <img src="images/icons/arrow-right-white.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__body container mobile-container">
+            <div class="footer__message js-message">
+                <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+                <div class="footer__newsletter-wrapper">
+                    <div class="footer__input-wrapper">
+                        <img src="images/icons/message.svg" alt="">
+                        <input class="footer__input" type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </div>
+            </div>
+
+            <div class="footer__link-wrapper js-link-wrapper">
+                <div class="footer__slogan-container">
+                    <div class="footer__logo-wrapper">
+                        <a href="index.html">
+                            <img src="images/logo/logo.svg" alt="logo">
+                        </a>
+                        <p class="footer__slogan">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="#">
+                            <img src="images/socials/twitter.svg" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/github.svg" alt="github">
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Company</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">About</a>
+                            <a href="#">Features</a>
+                            <a href="#">Works</a>
+                            <a href="#">Career</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Help</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Customer Support</a>
+                            <a href="#">Delivery Details</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>FAQ</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Account</a>
+                            <a href="#">Manage Deliveries</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Payments</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Resources</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Free eBooks</a>
+                            <a href="#">Development Tutorial</a>
+                            <a href="#">How to - Blog</a>
+                            <a href="#">Youtube Playlist</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__credits">
+                <p>Shop.co © 2000-2023, All Rights Reserved</p>
+                <ul class="footer__credits-list">
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/visa.svg" alt="visa">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/mastercard.svg" alt="mastercard">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/paypal.svg" alt="paypal">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/apple-pay.svg" alt="apple pay">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/google-pay.svg" alt="google pay">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="mobile-overlay" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button" type="submit">
+                <img src="images/icons/close-menu.svg" alt="close menu">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list">
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Shop</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">On Sale</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">New Arrivals</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Brands</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <script type="module" src="scripts/cart/cart.js"></script>
+</body>
+</html>

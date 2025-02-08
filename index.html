@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Shop.co</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__body container mobile-container js-header">
+            <div class="header__column-one">
+                <button class="header__burger-menu-button visible-tablet" type="button" onclick="mobileOverlay.showModal()">
+                    <img width="24" height="24" src="images/icons/burger-menu.svg" alt="burger menu">
+                    <span class="visually-hidden">Open navigation menu</span>
+                </button>
+
+                <div class="header__logo-wrapper">
+                    <a href="index.html">
+                        <img width="160" height="22" src="images/logo/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="header__list hidden-tablet">
+                    <li class="header__list-item">
+                        Shop
+                        <button type="button">
+                            <img src="images/icons/see-more-black.svg" alt="see more">
+                            <span class="visually-hidden">See more</span>
+                        </button>
+                    </li>
+                    <li class="header__list-item">
+                        On Sale
+                    </li>
+                    <li class="header__list-item">
+                        New Arrivals
+                    </li>
+                    <li class="header__list-item">
+                        Brands
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__column-two">
+                <div class="header__input-wrapper hidden-tablet">
+                    <button>
+                        <img src="images/icons/input-search.svg" alt="search">
+                        <span class="visually-hidden">Search</span>
+                    </button>
+                    <input type="text" class="header__input" placeholder="Search for products...">
+                </div>
+                <div class="header__icon-wrapper">
+                    <a href="#" class="visible-mobile">
+                        <img src="images/icons/mobile-input-search.svg" alt="search">
+                    </a>
+                    <a href="cart.html" class="header__cart-wrapper">
+                        <img width="24" height="24" src="images/icons/cart.svg" alt="cart">
+                        <p class="header__cart-quantity js-cart-quantity"></p>
+                    </a>
+                    <a href="#">
+                        <img width="24" height="24" src="images/icons/account.svg" alt="account">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="opening">
+            <div class="opening__body container mobile-container">
+                <img class="opening__ad-image js-opening-ad-image" src="images/ad/1.svg" alt="advertisement">
+                <div class="opening__description mobile-container js-description">
+                    <h1 class="opening__description-title">
+                        FIND CLOTHES THAT MATCHES YOUR STYLE
+                    </h1>
+                    <p class="opening__description-subtitle">
+                        Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+                    </p>
+                    <a href="#new-arrivals">
+                        <button onclick="" class="button-small" type="button">Shop Now</button>
+                    </a>
+
+                    <ul class="opening__description-list">
+                        <li class="opening__description-list-item">
+                            <p>200+</p>
+                            <p>International Brands</p>
+                        </li>
+                        <li class="opening__description-list-item">
+                            <p>2,000+</p>
+                            <p>High-Quality Products</p>
+                        </li>
+                        <li class="opening__description-list-item">
+                            <p>30,000+</p>
+                            <p>Happy Customers</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section brands">
+            <div class="brands__body container mobile-container">
+                <ul class="brands__list">
+                    <li class="brands__list-item">
+                        <img src="images/brands/versace.svg" alt="versace">
+                    </li>
+                    <li class="brands__list-item">
+                        <img class="brands__list-item-zara" src="images/brands/zara.svg" alt="zara">
+                    </li>
+                    <li class="brands__list-item">
+                        <img src="images/brands/gucci.svg" alt="gucci">
+                    </li>
+                    <li class="brands__list-item">
+                        <img src="images/brands/prada.svg" alt="prada">
+                    </li>
+                    <li class="brands__list-item">
+                        <img src="images/brands/calvin-klein.svg" alt="calvin klein">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section catalog">
+            <div class="catalog__body container mobile-container">
+                <h1 class="catalog__title" id="new-arrivals">NEW ARRIVALS</h1>
+
+                <div class="catalog__list-row-padding">
+                    <ul class="catalog__list js-catalog-list" data-list-gen-id="1"></ul>
+
+                    <ul class="catalog-hidden js-catalog-hidden js-catalog-list catalog__list" data-list-gen-id="1" data-list-id="1"></ul>
+                </div>
+
+                <div class="view-all-button-wrapper">
+                    <button class="view-all-button js-view-all-button" data-button-id="1">View all</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section catalog">
+            <div class="catalog__body container mobile-container">
+                <h1 class="catalog__title">TOP SELLING</h1>
+
+                <div class="catalog__list-row-padding">
+                    <ul class="catalog__list js-catalog-list" data-list-gen-id="2"  data-list-id="2"></ul>
+
+                    <ul class="catalog-hidden js-catalog-hidden js-catalog-list catalog__list" data-list-gen-id="2" data-list-id="2"></ul>
+                </div>
+
+                <div class="view-all-button-wrapper border-none">
+                    <button class="view-all-button js-view-all-button" data-button-id="2">View all</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section browse">
+        <div class="browse__body container mobile-container">
+            <div class="browse__wrapper">
+                <div class="browse__title">
+                    <h1>BROWSE BY DRESS STYLE</h1>
+                </div>
+
+                <div class="browse__categories">
+                    <div class="browse__row">
+                        <a href="category.html" target="_blank">
+                            <div class="browse__category-one">
+                                <p>Casual</p>
+                            </div>
+                        </a>
+
+                        <div class="browse__category-two">
+                            <p>Formal</p>
+                        </div>
+                    </div>
+
+                    <div class="browse__row">
+                        <div class="browse__category-two">
+                            <p>Party</p>
+                        </div>
+
+                        <div class="browse__category-one">
+                            <p>Gym</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="section review">
+            <div class="review__body container mobile-container">
+                <div class="review__title">
+                    <p>OUR HAPPY CUSTOMERS</p>
+
+                    <div class="review__title-button-wrapper">
+                        <button type="button" class="js-slide-button" id="previous">
+                            <img src="images/icons/arrow-left-black.svg" alt="">
+                        </button>
+
+                        <button type="button" class="js-slide-button" id="next">
+                            <img src="images/icons/arrow-right-black.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review__slides-container js-slides-container container mobile-container">
+                <ul class="review__list js-slides-list">
+                    <li class="review__item js-slide">
+                        <div class="review__item-body">
+                            <img class="review__item-rating-image" src="images/icons/stars/5.svg" alt="">
+
+                            <div class="review__item-name-wrapper">
+                                <p>Sarah M.</p>
+                                <img src="images/icons/tick-green.svg" alt="">
+                            </div>
+
+                            <p class="review__item-text">
+                                "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+                            </p>
+                        </div>
+                    </li>
+                    <li class="review__item js-slide">
+                        <div class="review__item-body">
+                            <img class="review__item-rating-image" src="images/icons/stars/5.svg" alt="">
+
+                            <div class="review__item-name-wrapper">
+                                <p>Alex K.</p>
+                                <img src="images/icons/tick-green.svg" alt="">
+                            </div>
+
+                            <p class="review__item-text">
+                                "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”
+                            </p>
+                        </div>
+                    </li>
+                    <li class="review__item js-slide">
+                        <div class="review__item-body">
+                            <img class="review__item-rating-image" src="images/icons/stars/5.svg" alt="">
+
+                            <div class="review__item-name-wrapper">
+                                <p>James L.</p>
+                                <img src="images/icons/tick-green.svg" alt="">
+                            </div>
+
+                            <p class="review__item-text">
+                                "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+                            </p>
+                        </div>
+                    </li>
+                    <li class="review__item js-slide">
+                        <div class="review__item-body">
+                            <img class="review__item-rating-image" src="images/icons/stars/5.svg" alt="">
+
+                            <div class="review__item-name-wrapper">
+                                <p>James L.</p>
+                                <img src="images/icons/tick-green.svg" alt="">
+                            </div>
+
+                            <p class="review__item-text">
+                                "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+                            </p>
+                        </div>
+                    </li>
+                    <li class="review__item js-slide">
+                        <div class="review__item-body">
+                            <img class="review__item-rating-image" src="images/icons/stars/5.svg" alt="">
+
+                            <div class="review__item-name-wrapper">
+                                <p>James L.</p>
+                                <img src="images/icons/tick-green.svg" alt="">
+                            </div>
+
+                            <p class="review__item-text">
+                                "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__body container mobile-container">
+            <div class="footer__message js-message">
+                <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+                <div class="footer__newsletter-wrapper">
+                    <div class="footer__input-wrapper">
+                        <img src="images/icons/message.svg" alt="">
+                        <input class="footer__input" type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </div>
+            </div>
+
+            <div class="footer__link-wrapper js-link-wrapper">
+                <div class="footer__slogan-container">
+                    <div class="footer__logo-wrapper">
+                        <a href="index.html">
+                            <img src="images/logo/logo.svg" alt="logo">
+                        </a>
+                        <p class="footer__slogan">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="#">
+                            <img src="images/socials/twitter.svg" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/socials/github.svg" alt="github">
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Company</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">About</a>
+                            <a href="#">Features</a>
+                            <a href="#">Works</a>
+                            <a href="#">Career</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Help</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Customer Support</a>
+                            <a href="#">Delivery Details</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>FAQ</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Account</a>
+                            <a href="#">Manage Deliveries</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Payments</a>
+                        </div>
+                    </li>
+                    <li class="footer__links-item">
+                        <div>
+                            <p>Resources</p>
+                        </div>
+
+                        <div class="footer__links">
+                            <a href="#">Free eBooks</a>
+                            <a href="#">Development Tutorial</a>
+                            <a href="#">How to - Blog</a>
+                            <a href="#">Youtube Playlist</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__credits">
+                <p>Shop.co © 2000-2023, All Rights Reserved</p>
+                <ul class="footer__credits-list">
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/visa.svg" alt="visa">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/mastercard.svg" alt="mastercard">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/paypal.svg" alt="paypal">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/apple-pay.svg" alt="apple pay">
+                        </a>
+                    </li>
+                    <li class="footer__credits-item">
+                        <a href="#">
+                            <img src="images/payment/google-pay.svg" alt="google pay">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="mobile-overlay" id="mobileOverlay">
+        <form class="mobile-overlay__close-button-wrapper" method="dialog">
+            <button class="mobile-overlay__close-button" type="submit">
+                <img src="images/icons/close-menu.svg" alt="close menu">
+                <span class="visually-hidden">Close navigation menu</span>
+            </button>
+        </form>
+        <div class="mobile-overlay__body">
+            <ul class="mobile-overlay__list">
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Shop</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">On Sale</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">New Arrivals</a>
+                </li>
+                <li class="menu-overlay__item">
+                    <a class="menu-overlay__link" href="#">Brands</a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+
+    <script type="module" src="scripts/homepage/homepage.js"></script>
+</body>
+</html>
